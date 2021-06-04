@@ -84,11 +84,43 @@ namespace EmployeeService.Controllers
                 catch (Exception Ex)
                 {
 
-                    return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, $"An error ocurred.{Ex.Message}");
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, $"An error ocurred.{Ex.Message}");
                 }
               
             }
 
+        }
+
+        public HttpResponseMessage Put(int id, [FromBody] Employee employee)
+        {
+            try
+            {
+                using (EmployeeDBEntities entities = new EmployeeDBEntities())
+                {
+                    var empl = entities.Employees.FirstOrDefault(e => e.ID == id);
+
+                    if (empl == null)
+                    {
+                        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Requested enity does not exist");
+                    }
+
+                    empl.FirstName = employee.FirstName;
+                    empl.LastName = employee.LastName;
+                    empl.Salary = employee.Salary;
+                    empl.Gender = employee.Gender;
+
+                    entities.SaveChanges();
+
+                    return Request.CreateResponse(HttpStatusCode.OK, "Update was successful");
+                }
+
+            }
+            catch (Exception)
+            {
+
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "An error occured");
+            }
+             
         }
 
     
