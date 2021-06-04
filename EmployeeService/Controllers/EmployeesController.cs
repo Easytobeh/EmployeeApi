@@ -62,17 +62,31 @@ namespace EmployeeService.Controllers
 
         }
 
-        [HttpDelete]
-        public HttpResponseMessage RemoveEmployee(int id)
+        public HttpResponseMessage DeleteEmployee(int id)
         {
             using(EmployeeDBEntities entities = new EmployeeDBEntities())
             {
-                entities.Employees.Remove(entities.Employees.FirstOrDefault(entity => entity.ID == id));
-                entities.SaveChanges();
-                
-                return Request.CreateResponse(HttpStatusCode.OK, "Employee Successfully deleted");
-                 
-                
+                try
+                {
+                    var entity = entities.Employees.FirstOrDefault(e => e.ID == id);
+
+                    if(entity == null)
+                    {
+                        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "The entity with Id:"+ id.ToString() + " does not exist");
+                    }
+
+                    entities.Employees.Remove(entity);
+                    entities.SaveChanges();
+
+                    return Request.CreateResponse(HttpStatusCode.OK, "Employee Successfully deleted");
+
+                }
+                catch (Exception Ex)
+                {
+
+                    return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, $"An error ocurred.{Ex.Message}");
+                }
+              
             }
 
         }
