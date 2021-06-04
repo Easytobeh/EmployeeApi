@@ -18,11 +18,19 @@ namespace EmployeeService.Controllers
             }
         }
 
-        public Employee GetEmployee(int id)
+        public HttpResponseMessage GetEmployee(int id)
         {
             using (EmployeeDBEntities entities = new EmployeeDBEntities())
             {
-                return entities.Employees.FirstOrDefault(e => e.ID == id);
+                var entity = entities.Employees.FirstOrDefault(e => e.ID == id);
+
+                if (entity != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, entity);
+                }
+
+                else 
+                    return Request.CreateErrorResponse(HttpStatusCode.NotFound, $"Employee with Id:{id.ToString()} could not be found.");
             }
         }
 
@@ -49,6 +57,21 @@ namespace EmployeeService.Controllers
 
                 //var response = Request.CreateResponse(HttpStatusCode.InternalServerError);
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, Ex.Message);
+                
+            }
+
+        }
+
+        [HttpDelete]
+        public HttpResponseMessage RemoveEmployee(int id)
+        {
+            using(EmployeeDBEntities entities = new EmployeeDBEntities())
+            {
+                entities.Employees.Remove(entities.Employees.FirstOrDefault(entity => entity.ID == id));
+                entities.SaveChanges();
+                
+                return Request.CreateResponse(HttpStatusCode.OK, "Employee Successfully deleted");
+                 
                 
             }
 
