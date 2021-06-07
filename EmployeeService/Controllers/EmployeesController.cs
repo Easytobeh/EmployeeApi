@@ -10,15 +10,45 @@ namespace EmployeeService.Controllers
 {
     public class EmployeesController : ApiController
     {
-        public IEnumerable<Employee> Get()
+        [HttpGet]
+        public HttpResponseMessage LoadEmployees(string gender="All")
         {
-            using (EmployeeDBEntities entities = new EmployeeDBEntities())
+            if (gender == null)
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Parameter can not be empty");
+            try
             {
-                return entities.Employees.ToList();
+                using (EmployeeDBEntities entities = new EmployeeDBEntities())
+                {
+                    switch (gender.ToLower())
+                    {
+                        case "all":
+                            return Request.CreateResponse(HttpStatusCode.OK,
+                                entities.Employees.ToList());
+                        case "male":
+                            return Request.CreateResponse(HttpStatusCode.OK,
+                                entities.Employees.Where(e => e.Gender.ToLower() == "male").ToList());
+                        case "female":
+                            return Request.CreateResponse(HttpStatusCode.OK,
+                                entities.Employees.Where(e => e.Gender.ToLower() == "female").ToList());
+                      
+                        default:
+                            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, $"Gender value" +
+                                $" should be either All, Male or Female. {gender} is invalid");
+
+                    }
+
+                }
+
             }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.StackTrace);
+            }
+            
         }
 
-        public HttpResponseMessage GetEmployee(int id)
+        [HttpGet]
+        public HttpResponseMessage LoadEmployeeById(int id)
         {
             using (EmployeeDBEntities entities = new EmployeeDBEntities())
             {
@@ -34,7 +64,8 @@ namespace EmployeeService.Controllers
             }
         }
 
-        public HttpResponseMessage PostEmployee([FromBody] Employee employee)
+        [HttpPost]
+        public HttpResponseMessage AddNewEmployee([FromBody] Employee employee)
         {
             try
             {
@@ -62,7 +93,8 @@ namespace EmployeeService.Controllers
 
         }
 
-        public HttpResponseMessage DeleteEmployee(int id)
+        [HttpDelete]
+        public HttpResponseMessage RemoveEmployee(int id)
         {
             using(EmployeeDBEntities entities = new EmployeeDBEntities())
             {
@@ -91,7 +123,8 @@ namespace EmployeeService.Controllers
 
         }
 
-        public HttpResponseMessage Put(int id, [FromBody] Employee employee)
+        [HttpPut]
+        public HttpResponseMessage ModifyEmployee(int id, [FromBody] Employee employee)
         {
             try
             {
@@ -101,7 +134,7 @@ namespace EmployeeService.Controllers
 
                     if (empl == null)
                     {
-                        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Requested enity does not exist");
+                        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Requested entity does not exist");
                     }
 
                     empl.FirstName = employee.FirstName;
