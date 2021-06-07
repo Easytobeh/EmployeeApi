@@ -124,7 +124,7 @@ namespace EmployeeService.Controllers
         }
 
         [HttpPut]
-        public HttpResponseMessage ModifyEmployee(int id, [FromBody] Employee employee)
+        public HttpResponseMessage ModifyEmployee(int id, [FromUri] Employee employee)
         {
             try
             {
