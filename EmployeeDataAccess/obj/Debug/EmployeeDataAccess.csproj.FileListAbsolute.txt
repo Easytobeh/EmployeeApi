@@ -3,9 +3,14 @@ C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\Employ
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.pdb
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\EntityFramework.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\System.Web.Http.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\EntityFramework.xml
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csprojAssemblyReference.cache
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\System.Web.Http.xml
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CopyComplete
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.dll
