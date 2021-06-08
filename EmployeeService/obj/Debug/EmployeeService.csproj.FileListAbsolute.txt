@@ -67,6 +67,7 @@ C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Razo
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.WebPages.Deployment.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.WebPages.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.WebPages.Razor.dll
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\WebApiContrib.Formatting.Jsonp.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\WebGrease.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\EmployeeDataAccess.pdb
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\EmployeeDataAccess.dll.config
@@ -83,6 +84,7 @@ C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Razo
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.WebPages.xml
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.WebPages.Razor.xml
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\WebApiContrib.Formatting.Jsonp.pdb
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\Antlr3.Runtime.pdb
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\obj\Debug\EmployeeService.csprojAssemblyReference.cache
@@ -90,3 +92,6 @@ C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\obj\Debug\EmployeeS
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\obj\Debug\EmployeeService.csproj.CopyComplete
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\obj\Debug\EmployeeService.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\obj\Debug\EmployeeService.pdb
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Cors.dll
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Http.Cors.dll
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Http.Cors.xml

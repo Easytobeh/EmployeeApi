@@ -5,6 +5,8 @@ using System.Linq;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Web.Http;
+using WebApiContrib.Formatting.Jsonp;
+using System.Web.Http.Cors;
 
 namespace EmployeeService
 {
@@ -35,6 +37,15 @@ namespace EmployeeService
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //Injecting Jsonp For API cross-domain sharing 
+
+            //var jsonpFormatter = new JsonpMediaTypeFormatter(config.Formatters.JsonFormatter);
+            //config.Formatters.Insert(0, jsonpFormatter);
+
+            //Enabling Cross Origin Resource File sharing 
+            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*"  );
+            config.EnableCors(cors);
 
            // config.Formatters.Add(new CustomJsonFormatter());
             
