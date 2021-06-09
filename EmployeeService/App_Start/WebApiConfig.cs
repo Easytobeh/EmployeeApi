@@ -38,19 +38,26 @@ namespace EmployeeService
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            //Enabling Cross Origin Resource File sharing 
+            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors();
+
+            //Register https re-redirect filter
+
+            config.Filters.Add(new RequireHttpsAttribute());
+
+
             //Injecting Jsonp For API cross-domain sharing 
 
             //var jsonpFormatter = new JsonpMediaTypeFormatter(config.Formatters.JsonFormatter);
             //config.Formatters.Insert(0, jsonpFormatter);
 
-            //Enabling Cross Origin Resource File sharing 
-            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*"  );
-            config.EnableCors(cors);
 
-           // config.Formatters.Add(new CustomJsonFormatter());
-            
+
+            // config.Formatters.Add(new CustomJsonFormatter());
+
             //config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("text/html"));
-            
+
             //config.Formatters.Remove(config.Formatters.XmlFormatter);
             //config.Formatters.JsonFormatter.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
             //config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
