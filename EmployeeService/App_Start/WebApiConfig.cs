@@ -43,8 +43,10 @@ namespace EmployeeService
             config.EnableCors();
 
             //Register https re-redirect filter
-
             config.Filters.Add(new RequireHttpsAttribute());
+
+            //Enable basic suthentication globally
+
 
 
             //Injecting Jsonp For API cross-domain sharing 

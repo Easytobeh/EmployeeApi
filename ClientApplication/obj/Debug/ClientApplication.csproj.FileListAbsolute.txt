@@ -71,7 +71,7 @@ C:\Users\Junaid\source\repos\EmployeeService\ClientApplication\bin\Newtonsoft.Js
 C:\Users\Junaid\source\repos\EmployeeService\ClientApplication\bin\Antlr3.Runtime.pdb
 C:\Users\Junaid\source\repos\EmployeeService\ClientApplication\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\Junaid\source\repos\EmployeeService\ClientApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Junaid\source\repos\EmployeeService\ClientApplication\obj\Debug\ClientApplication.csprojAssemblyReference.cache
+C:\Users\Junaid\source\repos\EmployeeService\ClientApplication\obj\Debug\ClientApplication.csproj.AssemblyReference.cache
 C:\Users\Junaid\source\repos\EmployeeService\ClientApplication\obj\Debug\ClientApplication.csproj.CoreCompileInputs.cache
 C:\Users\Junaid\source\repos\EmployeeService\ClientApplication\obj\Debug\ClientApplication.csproj.CopyComplete
 C:\Users\Junaid\source\repos\EmployeeService\ClientApplication\obj\Debug\ClientApplication.dll

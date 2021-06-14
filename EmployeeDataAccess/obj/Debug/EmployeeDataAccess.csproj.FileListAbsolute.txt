@@ -11,6 +11,7 @@ C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\Entity
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\bin\Debug\System.Web.Http.xml
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.AssemblyReference.cache
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CopyComplete
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.dll

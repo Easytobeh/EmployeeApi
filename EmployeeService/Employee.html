@@ -10,16 +10,28 @@
             let ulEmployees = $('#ul-employees');
             $('#btn').click(function ()
             {
+                let _username = $('#username').val();
+                let _password = $('#password').val();
+                let encodeCredentials = btoa(_username + ':' + _password);
                 $.ajax({
                     type: 'GET',
                     url: 'https://localhost:44393/api/Employees',
                     dataType: 'json',
+                    headers: {
+                        'Authorization': `Basic ${encodeCredentials}`
+                    },
                     success: function(data) {
                         ulEmployees.empty();
                         $.each(data, function (index, obj) {
-                            let fullname = `${obj.FirstName} ${obj.LastName}`;
-                            ulEmployees.append('<li>' + fullname + '</li>');
+                            let fullname = `${obj.FirstName} ${obj.LastName} (${obj.Gender})`;
+                            ulEmployees.append(`<li> ${fullname}</li>`);
                         });
+                    },
+                    complete: function (jqXHR) {
+                        if (jqXHR.status == '401') {
+                            ulEmployees.empty();
+                            ulEmployees.append(`<li style="color=red;"> ${jqXHR.status} : ${jqXHR.statusText}</li>`);
+                        }
                     }
                                      
                 });
@@ -31,8 +43,13 @@
     </script>
 </head>
 <body>
+    Username: <input id="username" type="text" placeholder="Enter username" /> 
+    Password:<input id="password" type="password" placeholder="Enter password"/>
+    <br />
+    <br />
     <input id="btn" type="button" value="Get All Employees" />
     <input id="btn-clear" type="button" value="Clear" />
     <ul id="ul-employees" ></ul>
+    
 </body>
 </html>

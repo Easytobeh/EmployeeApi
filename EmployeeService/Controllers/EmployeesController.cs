@@ -6,26 +6,64 @@ using System.Net.Http;
 using System.Web.Http;
 using EmployeeDataAccess;
 using System.Web.Http.Cors;
+using System.Threading;
 
 namespace EmployeeService.Controllers
 {
    // [EnableCorsAttribute("*","*","*")]
     public class EmployeesController : ApiController
     {
+        //[HttpGet]
+        //public HttpResponseMessage LoadEmployees(string gender="All")
+        //{
+        //    if (gender == null)
+        //        return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Parameter can not be empty");
+        //    try
+        //    {
+        //        using (EmployeeDBEntities entities = new EmployeeDBEntities())
+        //        {
+        //            switch (gender.ToLower())
+        //            {
+        //                case "all":
+        //                    return Request.CreateResponse(HttpStatusCode.OK,
+        //                        entities.Employees.ToList());
+        //                case "male":
+        //                    return Request.CreateResponse(HttpStatusCode.OK,
+        //                        entities.Employees.Where(e => e.Gender.ToLower() == "male").ToList());
+        //                case "female":
+        //                    return Request.CreateResponse(HttpStatusCode.OK,
+        //                        entities.Employees.Where(e => e.Gender.ToLower() == "female").ToList());
+                      
+        //                default:
+        //                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, $"Gender value" +
+        //                        $" should be either All, Male or Female. {gender} is invalid");
+
+        //            }
+
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.StackTrace);
+        //    }
+            
+        //}
+
         [HttpGet]
+        [BasicAuthentication]
+        
         public HttpResponseMessage LoadEmployees(string gender="All")
         {
-            if (gender == null)
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Parameter can not be empty");
+            string username = Thread.CurrentPrincipal.Identity.Name;
+
+            
             try
             {
                 using (EmployeeDBEntities entities = new EmployeeDBEntities())
                 {
-                    switch (gender.ToLower())
+                    switch (username.ToLower())
                     {
-                        case "all":
-                            return Request.CreateResponse(HttpStatusCode.OK,
-                                entities.Employees.ToList());
                         case "male":
                             return Request.CreateResponse(HttpStatusCode.OK,
                                 entities.Employees.Where(e => e.Gender.ToLower() == "male").ToList());
@@ -34,8 +72,7 @@ namespace EmployeeService.Controllers
                                 entities.Employees.Where(e => e.Gender.ToLower() == "female").ToList());
                       
                         default:
-                            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, $"Gender value" +
-                                $" should be either All, Male or Female. {gender} is invalid");
+                            return Request.CreateResponse(HttpStatusCode.BadRequest);
 
                     }
 
