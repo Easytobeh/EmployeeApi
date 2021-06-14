@@ -58,7 +58,9 @@ C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\Microsoft.CodeD
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\Newtonsoft.Json.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Net.Http.Formatting.dll
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Cors.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Helpers.dll
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Http.Cors.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Http.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Http.WebHost.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Mvc.dll
@@ -73,6 +75,7 @@ C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\EmployeeDataAcc
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\EmployeeDataAccess.dll.config
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\EntityFramework.xml
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\EntityFramework.SqlServer.xml
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Http.Cors.xml
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\Newtonsoft.Json.xml
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Net.Http.Formatting.xml
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Helpers.xml
@@ -87,11 +90,8 @@ C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.WebP
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\WebApiContrib.Formatting.Jsonp.pdb
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\Antlr3.Runtime.pdb
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\obj\Debug\EmployeeService.csprojAssemblyReference.cache
+C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\obj\Debug\EmployeeService.csproj.AssemblyReference.cache
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\obj\Debug\EmployeeService.csproj.CoreCompileInputs.cache
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\obj\Debug\EmployeeService.csproj.CopyComplete
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\obj\Debug\EmployeeService.dll
 C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\obj\Debug\EmployeeService.pdb
-C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Cors.dll
-C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Http.Cors.dll
-C:\Users\Junaid\source\repos\EmployeeService\EmployeeService\bin\System.Web.Http.Cors.xml
